@@ -1,0 +1,11 @@
+{
+    "project_code": "example-cisyd",
+    "services": [
+      {
+        "folder": "services/example-01",
+        "build_type": "docker",
+        "service-name": "example01"
+      }
+    ]
+  }
+  
