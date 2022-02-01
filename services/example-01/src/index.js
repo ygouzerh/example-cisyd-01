@@ -1,5 +1,5 @@
 //now it load express module with `require` directive
-import express from 'express';
+var express = require('express')
 
 var app = express()
 //Define request response in /hello and response with text Hello World!
