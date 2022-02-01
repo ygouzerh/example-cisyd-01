@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${SERVICE}-deploy 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${SERVICE}-deploy
+  template:
+    metadata:
+      labels:
+        app: ${SERVICE}-deploy
+    spec:
+      containers:
+      - name: ${SERVICE}-pod
+        image: ${DOCKER_REGISTRY}/${REGISTRY_NAMESPACE}/${SERVICE}:${SERVICE_VERSION}
+        ports:
+        - containerPort: 8080
